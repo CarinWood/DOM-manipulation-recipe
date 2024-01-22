@@ -41,3 +41,23 @@ console.log(ingredients.children.length)
 ingredients for the paste? */
 
 console.log(ingredients.children[3].innerText)
+
+/* Create an an array of objects from the instructions. 
+Each element in the array should be an object that looks like this:
+{
+  order: number;
+  text: instruction;
+} */
+
+let instructions = document.querySelector('.instructions-list')
+let instructionsArray = []
+
+for (let i = 0; i < 10; i++) {
+    instructionsArray[i] = {order: i+1, text: instructions.children[i].innerText}    
+}
+
+console.log('*********************')
+
+for (const item in instructionsArray) {
+    console.log(instructionsArray[item])
+}
