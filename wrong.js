@@ -39,3 +39,54 @@ Change it to the correct one.  */
 let image = document.querySelector('img')
 console.log(image.getAttribute('src'))
 image.src = "assets/frozen-cheesecake-slice.jpg"
+
+/* The background color of the ingredients list container is wrong. 
+Fix it. */
+
+let container = document.querySelector(".ingredients-container")
+container.style.backgroundColor = "#f9f9f9"
+
+/* The ingredients are divided in to two parts, 
+one for the bottom and one for the paste. 
+In the list of the ingredients to the bottom, 
+there is a text instead of two list items. 
+Remove the text and add those two list items. */
+
+let listBottom = document.querySelector('.ingredients-list-bottom')
+let pTag = listBottom.querySelector('p')
+listBottom.removeChild(pTag)
+
+let itemOne = document.createElement('li')
+itemOne.innerHTML = '15st digistivekex'
+
+let itemTwo = document.createElement('li')
+itemTwo.innerHTML = 'Lite smör'
+
+listBottom.appendChild(itemOne)
+listBottom.appendChild(itemTwo)
+
+/* The third ingredient in the list of ingredients to the paste is wrong. 
+Change that specific ingredient to the correct one. */
+
+let ingredients = document.querySelector('.ingredients-list-paste')
+ingredients.children[2].innerHTML = '3tsk vaniljsocker'
+
+/* There is also a missing ingredient in the list of ingredients to the paste. 
+Look and see what it is and add that one the the end of the list. */
+
+let missingIngredient = document.createElement('li')
+missingIngredient.innerHTML = '400g naturell philadelphiaost'
+ingredients.appendChild(missingIngredient)
+
+/* The text "Instructions" to the left, beneath the image, 
+has some shadow styling applied to it. Remove that styling. */
+
+let instructionsHeading = document.querySelector('.shadow')
+instructionsHeading.style.boxShadow = 'none'
+
+/* Two list elements of the list of instructions are incorrect. 
+Find them and change them to the correct ones. */
+
+let listParent = document.querySelector('.instructions-list')
+listParent.children[1].innerHTML = 'Separera ägggulor och äggvitor. Äggvitorna lägger du i en stor bunke, äggulorna i en liten bunke.'
+listParent.children[8].innerHTML = 'Ställ in i frysen över natten.'

@@ -29,7 +29,7 @@ let imageObject = {
 }
 
 for (let item in imageObject) {
-       console.log(item + ":" + imageObject[item])
+    console.log(item + ":" + imageObject[item])
 }
 /* 
 How many ingredients has the paste? */
